@@ -1,0 +1,1 @@
+wget --no-check-certificate https://dl.bintray.com/mitchellh/packer/0.5.1_linux_amd64.zip -O packer.zip
