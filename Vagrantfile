@@ -82,6 +82,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         "ruby"=> {
           "default_version"=> "1.9.1"
         }
+      },
+      "authorization"=> {
+        "sudo"=> {
+          "groups"=> ["admin", "wheel", "sysadmin"],
+          "users"=> ["ubuntu"],
+          "passwordless"=> "true"
+        }
+      },
+      "packer"=> {
+        "version"=> "0.5.1"
       }
     }
   end

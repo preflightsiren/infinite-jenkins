@@ -37,7 +37,8 @@
         "recipe[ruby]",
         "recipe[rubygems]",
         "recipe[packer]",
-        "recipe[jenkins::server]"
+        "recipe[jenkins::server]",
+        "recipe[sudo]"
       ],
       "json": {
         "jenkins": {
@@ -53,6 +54,16 @@
           "ruby": {
             "default_version": "1.9.1"
           }
+        },
+        "authorization": {
+          "sudo": {
+            "groups": ["admin", "wheel", "sysadmin"],
+            "users": ["ubuntu"],
+            "passwordless": "true"
+          }
+        },
+        "packer": {
+          "version": "0.5.1"
         }
       }
     }
